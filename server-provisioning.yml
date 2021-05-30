@@ -1,0 +1,6 @@
+- name: common provisioning changes
+  hosts: all
+  roles:
+    - install-basic-packages
+      #    - timezone
+      #    - kernel-parameter

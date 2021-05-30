@@ -1,0 +1,15 @@
+---
+- name: Install a list of packages
+  apt:
+    name: "{{item}}"
+    state: latest
+    update_cache: yes
+  loop:
+    - htop
+    - git
+      #    - curl
+    - telnet
+      #    - vim
+      #    - net-tools
+      #    - wget
+      #    - bash-completion

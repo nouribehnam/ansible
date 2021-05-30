@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes
+  become_user: root
+  roles:
+    - { role: install-node-exporter, tags: "install-node-exporter" }
+    - { role: install-basic-packages, tags: "install-basic-packages" }
+    - { role: hosts, tags: "update-hosts" }
+    - { role: ansible-minio, tags: "install-minio" }
